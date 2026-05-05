@@ -58,13 +58,7 @@ export default function LocalBusinessSchema() {
             name: brand.name,
           },
         },
-        ...(service.price && {
-          priceSpecification: {
-            "@type": "PriceSpecification",
-            price: service.price,
-            priceCurrency: "USD",
-          },
-        }),
+
         availability: "InStock",
         validFrom: new Date().toISOString(),
       })),

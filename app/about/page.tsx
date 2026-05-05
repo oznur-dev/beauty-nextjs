@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Sparkles, Target, Users, Shield, Diamond } from "lucide-react";
+import Image from "next/image";
+import { Users, Shield, Diamond } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { generateMetadata } from "@/lib/seo";
 
@@ -69,21 +70,29 @@ export default function AboutPage() {
                 doğal güzelliğinizi ön plana çıkarıyoruz.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-12 text-center">
-              <Sparkles className="h-12 w-12 text-theme-primary mb-4 mx-auto" />
-              <div className="text-theme-primary font-medium">
-                Güzelliğinizi Keşfedin
-              </div>
+            <div className="relative h-80 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/assets/images/photo-1521590832167-7bcbfaa6381f.jpg"
+                alt="Beautyliva güzellik merkezi misyon"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
           </div>
 
           {/* Vision */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="order-2 lg:order-1 bg-gradient-to-br from-accent/10 to-primary/10 rounded-2xl p-12 text-center">
-              <Target className="h-12 w-12 text-theme-primary mb-4 mx-auto" />
-              <div className="text-theme-primary font-medium">
-                Kalite ve Güven
-              </div>
+            <div className="order-2 lg:order-1 relative h-80 rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/assets/images/photo-1570172619644-dfd03ed5d881.jpg"
+                alt="Beautyliva kalite ve güven"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="font-heading text-2xl sm:text-3xl font-semibold text-theme-primary mb-4">

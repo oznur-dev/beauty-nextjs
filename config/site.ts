@@ -143,72 +143,140 @@ export const siteConfig: SiteConfig = {
   },
   services: [
     {
-      id: "lazer-epilasyon",
-      name: "Lazer Epilasyon",
-      description: "Diod lazer teknolojisiyle kalıcı tüy azaltma işlemi.",
-      price: "₺150'den başlayan fiyatlarla",
-      duration: "30-90 dk",
-      category: "Lazer",
+      id: "sac-boyama",
+      name: "Saç Boyama",
+      description:
+        "Kişiye özel renk analizi ile tekli boyama, röfle, balayage ve ombre teknikleri.",
+      duration: "90-150 dk",
+      image:
+        "/assets/images/pexels-photo-8468126.jpeg",
+
+      category: "Saç Bakımı",
       featured: true,
     },
     {
-      id: "cilt-bakimi",
-      name: "Medikal Cilt Bakımı",
-      description: "Cilt tipinize özel profesyonel bakım uygulamaları.",
-      price: "₺300",
+      id: "keratin-bakimi",
+      name: "Keratin Bakımı",
+      description:
+        "Yıpranmış saçları besleyen, frizleri azaltan ve parlaklık katan profesyonel keratin uygulaması.",
+      duration: "60-90 dk",
+      image:
+       "/assets/images/pexels-photo-29189919.jpeg",
+      category: "Saç Bakımı",
+    },
+    {
+      id: "sac-kesimi-fon",
+      name: "Saç Kesimi & Fön",
+      description:
+        "Yüz şeklinize ve saç tipinize özel kesim ile şekillendirme seansı.",
+      duration: "45-60 dk",
+      image:
+        "/assets/images/pexels-photo-6502174.jpg",
+      category: "Saç Bakımı",
+    },
+    {
+      id: "yuz-bakimi",
+      name: "Yüz Bakımı",
+      description:
+        "Cilt tipine özel derin temizlik, nemlendirme maskesi ve peeling içeren kapsamlı yüz bakımı.",
       duration: "60 dk",
+      image:
+        "/assets/images/pexels-photo-3985338.jpeg",
       category: "Cilt Bakımı",
       featured: true,
     },
     {
       id: "hydrafacial",
       name: "Hydrafacial",
-      description: "Derin temizlik, peeling ve nemlendirme işlemi.",
-      price: "₺450",
+      description:
+        "Derin gözenek temizliği, peeling ve yoğun nemlendirmeyi tek seansta birleştiren ileri teknoloji cilt bakımı.",
       duration: "45 dk",
+      image:
+        "/assets/images/pexels-photo-18209809.jpeg",
       category: "Cilt Bakımı",
       featured: true,
     },
     {
-      id: "kalici-makyaj",
-      name: "Kalıcı Makyaj",
-      description: "Kaş, göz ve dudak için kalıcı makyaj uygulaması.",
-      price: "₺800'den başlayan fiyatlarla",
-      duration: "2-3 saat",
-      category: "Kalıcı Makyaj",
+      id: "lazer-epilasyon",
+      name: "Lazer Epilasyon",
+      description:
+        "Diode lazer teknolojisiyle tüm vücut veya bölgesel kalıcı tüy azaltma seansları.",
+      duration: "30-90 dk",
+      image:
+        "/assets/images/pexels-photo-3985354.jpeg",
+      category: "Epilasyon",
       featured: true,
     },
     {
-      id: "kas-kirpik",
-      name: "Kaş & Kirpik Tasarımı",
-      description: "Kaş şekillendirme ve kirpik lifting hizmetleri.",
-      price: "₺120",
-      duration: "45 dk",
-      category: "Kaş & Kirpik",
+      id: "agda",
+      name: "Ağda",
+      description:
+        "Bacak, koltuk altı, bikini ve üst dudak için sıcak/soğuk ağda uygulaması.",
+      duration: "20-45 dk",
+      image:
+        "/assets/images/pexels-photo-35103884.jpeg",
+      category: "Epilasyon",
     },
     {
-      id: "bolgesel-incelme",
-      name: "Bölgesel İncelme",
-      description: "Kavitasyon ve radyofrekans ile bölgesel zayıflama.",
-      price: "₺200",
-      duration: "60 dk",
-      category: "Vücut Bakımı",
+      id: "kalici-makyaj",
+      name: "Kalıcı Makyaj",
+      description:
+        "Microblading, kaş dövmesi ve eyeliner uygulamalarıyla uzun ömürlü doğal bir görünüm.",
+      duration: "2-3 saat",
+      image:
+        "/assets/images/pexels-photo-8826403.jpeg",
+      category: "Kaş & Kirpik",
+      featured: true,
+    },
+    {
+      id: "kas-tasarimi",
+      name: "Kaş Tasarımı",
+      description:
+        "Yüz şeklinize özel kaş şekillendirme, renklendirme ve laminasyon hizmetleri.",
+      duration: "30-45 dk",
+      image:
+        "/assets/images/pexels-photo-18809795.jpeg",
+      category: "Kaş & Kirpik",
     },
     {
       id: "ipek-kirpik",
       name: "İpek Kirpik",
-      description: "Doğal görünümlü kalıcı kirpik uzatma işlemi.",
-      price: "₺250",
-      duration: "90 dk",
+      description:
+        "Tek tek veya hacim tekniğiyle uygulanan doğal görünümlü kalıcı kirpik uzatma.",
+      duration: "90-120 dk",
+      image:
+        "/assets/images/pexels-photo-36930354.jpeg",
       category: "Kaş & Kirpik",
     },
     {
-      id: "g5-masaj",
-      name: "G5 Masajı",
-      description: "Selülit giderici ve sıkılaştırıcı masaj uygulaması.",
-      price: "₺180",
-      duration: "50 dk",
-      category: "Vücut Bakımı",
+      id: "manikur-pedikur",
+      name: "Manikür & Pedikür",
+      description:
+        "El ve ayak bakımı; tırnak şekillendirme, kutikül temizliği ve nemlendirici masaj içerir.",
+      duration: "45-60 dk",
+      image:
+        "/assets/images/pexels-photo-6135675.jpeg",
+      category: "Tırnak Bakımı",
+    },
+    {
+      id: "kalici-oje",
+      name: "Kalıcı Oje (Jel)",
+      description:
+        "UV/LED lambayla kürlenen, 2-3 hafta boyunca çatlama ve dökülme yapmayan uzun ömürlü oje uygulaması.",
+      duration: "45 dk",
+      image:
+        "/assets/images/pexels-photo-3997392.jpeg",
+      category: "Tırnak Bakımı",
+    },
+    {
+      id: "gelin-makyaji",
+      name: "Gelin & Özel Gün Makyajı",
+      description:
+        "Düğün, nişan ve özel etkinlikler için uzman makyaj sanatçısı tarafından yapılan kalıcı makyaj.",
+      duration: "60-90 dk",
+      image:
+        "/assets/images/pexels-photo-35983904.jpeg",
+      category: "Makyaj",
     },
   ],
 };

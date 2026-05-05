@@ -1,16 +1,17 @@
 import { Metadata } from "next";
-import { Sparkles, Star } from "lucide-react";
+import Image from "next/image";
+import { Star, Clock } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { generateMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = generateMetadata({
-  title: "Services",
-  description: `Professional beauty services including ${siteConfig.services
+  title: "Hizmetlerimiz",
+  description: `${siteConfig.brand.name} olarak ${siteConfig.services
     .slice(0, 4)
     .map((s) => s.name.toLowerCase())
     .join(
       ", ",
-    )} and more. Book your appointment at ${siteConfig.brand.name} today.`,
+    )} ve daha fazlası için randevu alın. ${siteConfig.brand.contact.address.city}'de profesyonel güzellik hizmetleri.`,
   keywords: siteConfig.services.map((s) => s.name.toLowerCase()),
   canonical: "/services",
 });
@@ -52,44 +53,49 @@ export default function ServicesPage() {
                 {getServicesByCategory(category).map((service) => (
                   <div
                     key={service.id}
-                    className={`bg-surface rounded-xl p-6 border-2 hover:shadow-xl transition-all duration-300 ${
+                    className={`group bg-surface rounded-xl overflow-hidden border-2 hover:shadow-xl transition-all duration-300 ${
                       service.featured
                         ? "border-primary shadow-lg"
                         : "border-secondary hover:border-primary"
                     }`}
                   >
-                    {service.featured && (
-                      <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary text-white mb-4">
-                        <Star className="h-3 w-3 mr-1" />
-                        Öne Çıkan
-                      </div>
-                    )}
-
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center">
-                      <Sparkles className="h-6 w-6 text-white" />
-                    </div>
-
-                    <h3 className="font-heading text-xl font-semibold text-primary mb-3 text-center">
-                      {service.name}
-                    </h3>
-
-                    <p className="text-secondary text-sm mb-6 leading-relaxed text-center">
-                      {service.description}
-                    </p>
-
-                    <div className="space-y-3">
-                      {service.price && (
-                        <div className="flex justify-between items-center py-2 border-t border-secondary">
-                          <span className="text-muted font-medium">Fiyat:</span>
-                          <span className="font-semibold text-theme-primary">
-                            {service.price}
-                          </span>
+                    {/* Service Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      {service.image ? (
+                        <Image
+                          src={service.image}
+                          alt={service.name}
+                          fill
+                          className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-gradient-to-br from-primary/20 to-accent/20" />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                      {service.featured && (
+                        <div className="absolute top-3 left-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary text-white">
+                          <Star className="h-3 w-3 mr-1" />
+                          Öne Çıkan
                         </div>
                       )}
+                    </div>
 
+                    <div className="p-6">
+                      <h3 className="font-heading text-xl font-semibold text-primary mb-3">
+                        {service.name}
+                      </h3>
+
+                      <p className="text-secondary text-sm mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+
+                    <div className="space-y-3">
                       {service.duration && (
                         <div className="flex justify-between items-center py-2 border-t border-secondary">
-                          <span className="text-muted font-medium">Süre:</span>
+                          <span className="text-muted font-medium flex items-center gap-1">
+                            <Clock className="h-3.5 w-3.5" /> Süre:
+                          </span>
                           <span className="font-semibold text-secondary">
                             {service.duration}
                           </span>
@@ -106,6 +112,7 @@ export default function ServicesPage() {
                       >
                         Randevu Al
                       </a>
+                    </div>
                     </div>
                   </div>
                 ))}
