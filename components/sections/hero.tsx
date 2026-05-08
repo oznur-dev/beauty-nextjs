@@ -23,7 +23,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 pb-32 sm:py-24 sm:pb-24">
         <div className="max-w-2xl">
           <span className="inline-block text-sm font-medium tracking-widest uppercase text-amber-300 mb-4">
             {brand.contact.address.city} · {brand.contact.address.state}
@@ -73,12 +73,12 @@ export default function Hero() {
 
       {/* Bottom feature bar */}
       <div className="absolute bottom-0 left-0 right-0 z-10 bg-white/10 backdrop-blur-md border-t border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap justify-center gap-8 text-sm text-white font-medium">
-            <span>✦ Uzman Ekip</span>
-            <span>✦ Modern Teknoloji</span>
-            <span>✦ Kişiye Özel Bakım</span>
-            <span>✦ Hijyenik Ortam</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-5">
+          <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-3 sm:gap-x-8 sm:gap-y-4 text-sm sm:text-base text-white font-medium">
+            <span className="flex items-center gap-1.5">✦ Uzman Ekip</span>
+            <span className="flex items-center gap-1.5">✦ Modern Teknoloji</span>
+            <span className="flex items-center gap-1.5">✦ Kişiye Özel Bakım</span>
+            <span className="flex items-center gap-1.5">✦ Hijyenik Ortam</span>
           </div>
         </div>
       </div>
